@@ -1,0 +1,29 @@
+#collapse{
+    // border: 1px solid red;
+    width: 73vw;
+}
+
+.header{
+    padding: 1vw 0 1vw 1.3vw;
+    background-color: #FF6060;
+    // color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    // text-align: cent;
+    span{
+        color: #F6F6F6;
+    }
+    img{
+        width: 50px;
+        height: 13px;
+        padding: 0 3% 0 0;
+        cursor: pointer;
+    }
+}
+
+.content{
+    padding: 1.3vw;
+    background-color: #F6F6F6;
+    line-height: 150%;
+}

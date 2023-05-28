@@ -1,13 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './styles/index.scss';
 import reportWebVitals from './reportWebVitals';
+import ErrorPage from "./pages/notFound";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Homepage from "./pages/homepage";
+import FicheLogement from "./pages/ficheLogement";
+import APropos from "./pages/aPropos";
+import Layout from "./components/layout";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Layout>
+        <Homepage />
+      </Layout>
+    ),
+    // errorElement: <Layout><ErrorPage /></Layout>,
+  },
+  {
+    path: "fiche-logement/:id",
+    element: (
+      <Layout>
+        <FicheLogement />
+      </Layout>
+    ),
+    // errorElement: <Layout><ErrorPage /></Layout>,
+  },
+  {
+    path: "a-propos",
+    element: (
+      <Layout>
+        <APropos />
+      </Layout>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <Layout>
+        <ErrorPage />
+      </Layout>
+    ),
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

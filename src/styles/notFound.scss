@@ -1,0 +1,29 @@
+
+* {
+    color: #FF6060;
+}
+
+// #error-page {
+//     justify-content: center;
+//     align-items:center;
+//     text-align: center;
+//     // margin: 15vh auto;
+// }
+
+#error-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+}
+
+h1{
+    font-size: 16vw;
+    font-weight: bold;
+}
+
+h2{
+    margin: 0 0 12vh 0;
+    font-size: 1.85rem;
+}

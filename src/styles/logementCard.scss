@@ -1,0 +1,16 @@
+#logement-card{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgb(60, 60, 61) 8%, rgba(255, 255, 255, 0) 50%), url("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg");
+    position: relative;
+    h1{
+        font-size: 1rem;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        width: 50%;
+        color: white;
+    }
+}
