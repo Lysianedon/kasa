@@ -1,25 +1,33 @@
 body{
     height: 100vh;
-    // border: 1px solid black;
 }
 
 .logements{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    // border: 7px solid green;
     padding: 2vw;
     background-color: #F6F6F6;
     width: 90vw;
     margin: 4vh auto;
     border-radius: 25px;
+    .card{
+        margin: 1vw;
+        display: flex;
+    }
+    .spacer{
+        flex-grow: 0.85;
+    }
+    @media(max-width: 425px){
+        background-color: transparent;
+        padding: 0;
+        .card{
+            margin: 2vw;
+        }  
+        .card:nth-child(1){
+            margin: 0 2vw 2vw 2vw;
+        }
+    }
 }
 
-.card{
-    margin: 1vw;
-    display: flex;
-}
 
-.spacer{
-    flex-grow: 0.85;
-}

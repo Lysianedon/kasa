@@ -7,9 +7,9 @@ export default function Carousel({ pictures, altImg }) {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const [currentPicture, setCurrentPicture] = useState(1);
 
-    // Inside the component
     function handleImageLoad() {
       setImagesLoaded(true);
+      return imagesLoaded;
     }
 
     function SlideToNextImg() {
@@ -26,14 +26,11 @@ export default function Carousel({ pictures, altImg }) {
         }
 
         if (currentCarouselWidth >=  totalWidth - carouselWidth) {
-            // console.log("total reached !"); 
             document.querySelector(".slides-container").scrollLeft = 0;
-            // setCurrentCarouselWidth(carouselWidth);
             setCurrentCarouselWidth(0);
         } else {
             document.querySelector(".slides-container").scrollLeft += carouselWidth;
             setCurrentCarouselWidth(currentCarouselWidth + carouselWidth);
-            // console.log("currentCarouselWidth", currentCarouselWidth, "out of", totalWidth);
         }
     }
     function SlideToPrevImg() {
@@ -52,12 +49,9 @@ export default function Carousel({ pictures, altImg }) {
         if (currentCarouselWidth ===  0) {
             document.querySelector(".slides-container").scrollLeft = totalWidth - carouselWidth;
             setCurrentCarouselWidth(totalWidth - carouselWidth);
-            // console.log("back to the end !", currentCarouselWidth); 
-
         } else {
             setCurrentCarouselWidth(currentCarouselWidth - carouselWidth);
             document.querySelector(".slides-container").scrollLeft -= carouselWidth;
-            // console.log("currentCarouselWidth", currentCarouselWidth, "out of", totalWidth);
         }
     }
     const gallery = pictures.map((p, index) => <img src={p} alt={altImg} className='slide' key={index} onLoad={handleImageLoad}/> )
@@ -71,8 +65,6 @@ export default function Carousel({ pictures, altImg }) {
   </button>
   <div className={`current-picture-count  ${pictures.length <= 1 ? 'hidden' : ''} `}>{currentPicture}/{pictures.length}</div>
   <div className="slides-container" id="slides-container">
-  {/* <img src={currentPicture} alt="logement" className='slide'/> */}
-  {/* <img src="https://s3-eu-west-1.amazonaws.com/course.oc-stati…ects/front-end-kasa-project/accommodation-8-3.jpg" alt="logement" className='slide'/> */}
   {gallery}
   </div>
 </section>

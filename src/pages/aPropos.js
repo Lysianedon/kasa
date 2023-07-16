@@ -12,7 +12,7 @@ export default function APropos() {
   })
     return (
       <div id="a-propos">
-        <Banner size="small" backgroundImg={mountainsImg} />
+        <Banner size="large" backgroundImg={mountainsImg} />
        <div className="list-values"> {listValues}</div>
       </div>
     );

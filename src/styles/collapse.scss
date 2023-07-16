@@ -1,5 +1,4 @@
 .large-size{
-    // border: 1px solid red;
     width: 75vw;
     margin: 2.5vh 0;
 }
@@ -40,7 +39,6 @@
         top: 0;
         transform: rotate(135deg);
     }
-  
 }
 .content.closed {
     padding: 0;
@@ -55,7 +53,6 @@
     line-height: 150%;
     transition:  200ms;
     overflow: hidden;
-
     ul li{
         list-style-type: none;
     }

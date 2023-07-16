@@ -1,7 +1,5 @@
 .list-values{
-    // border: 3px solid green;
     width: fit-content;
-    // width: 90vw;
     margin: auto;
 }
 
@@ -11,6 +9,6 @@
 
 @media(max-width: 425px){
     .list-values{
-        margin: 2vh auto;
+        margin: auto;
     }
 }

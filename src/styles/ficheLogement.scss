@@ -1,8 +1,6 @@
 #fiche-logement{
     width: 90vw;
     margin: auto;
-    // min-height: 90vh;
-
     .header-infos{
         margin: 2vh 0;
         display: flex;
@@ -22,16 +20,13 @@
                 margin: 0 5px 0 0;
             }
         }
-
         .rating{
             margin: 1vh 0;
         }
-        
     }
     .description-equipments{
         display: flex;
         justify-content: space-between;
-
     }
 
     .collapse{
@@ -46,6 +41,11 @@
             flex-direction: column;
             h1{
                 font-size: 1.7em;
+                line-height: 120%;
+            }
+
+            h3{
+                margin: 1vh 0 0 0;
             }
             .tags{
                 display: flex;
@@ -71,5 +71,4 @@
             }
         }
     }
-
 }

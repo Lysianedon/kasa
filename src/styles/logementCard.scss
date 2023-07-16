@@ -13,4 +13,13 @@
         width: 50%;
         color: white;
     }
+    @media(max-width: 425px){
+        width: 91vw;
+        height: 265px;
+
+        h1{
+            font-size: 1.4rem;
+            width: 55%;
+        }
+    }
 }
