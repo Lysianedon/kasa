@@ -1,0 +1,75 @@
+#fiche-logement{
+    width: 90vw;
+    margin: auto;
+    // min-height: 90vh;
+
+    .header-infos{
+        margin: 2vh 0;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 2rem;
+            font-weight: normal;
+            line-height: 150%;
+        }
+        .tags{
+            margin: 2vh 0;
+            .tag{
+                margin: 0 5px;
+                display: inline;
+            }
+            .tag:nth-child(1){
+                margin: 0 5px 0 0;
+            }
+        }
+
+        .rating{
+            margin: 1vh 0;
+        }
+        
+    }
+    .description-equipments{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .collapse{
+        margin: 0 0 8vh 0;
+    }
+}
+
+@media(max-width: 425px){
+
+    #fiche-logement{
+        .header-infos{
+            flex-direction: column;
+            h1{
+                font-size: 1.7em;
+            }
+            .tags{
+                display: flex;
+                flex-wrap: wrap;
+                .tag{
+                    margin: 10px 5px;
+                }
+                .tag:nth-child(1){
+                    margin: 10px 5px;
+                }
+            }
+        }
+        .profile-stars{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .description-equipments{
+            flex-direction: column;
+            align-items: center;  
+            div{
+                margin: 4px 0;
+            }
+        }
+    }
+
+}

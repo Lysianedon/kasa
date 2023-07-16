@@ -3,19 +3,11 @@
     color: #FF6060;
 }
 
-// #error-page {
-//     justify-content: center;
-//     align-items:center;
-//     text-align: center;
-//     // margin: 15vh auto;
-// }
-
 #error-page {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
+    justify-content: center;
+    align-items:center;
     text-align: center;
+    margin: 10vh auto;
 }
 
 h1{
@@ -26,4 +18,24 @@ h1{
 h2{
     margin: 0 0 12vh 0;
     font-size: 1.85rem;
+}
+
+@media(max-width: 768px){
+
+    #error-page {
+        margin: 6vh auto;
+    }
+
+    h1{
+        font-size:calc(100px + 1.5vw);
+    }
+    h2, a{
+        font-size:3vw;
+        font-size:calc(12px + 1.5vw);
+    }
+
+    h2{
+        margin: 9vh 0;
+    }
+
 }

@@ -27,3 +27,12 @@
     min-height: 300px;
     height: 25vh;
 }
+
+@media(max-width: 425px){
+    #small{
+        height: 29vh;
+    }
+    #large{
+        height: 25vh;
+    }
+}

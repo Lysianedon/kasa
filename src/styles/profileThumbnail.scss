@@ -1,0 +1,24 @@
+#profile-thumbnail{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    h4{
+        margin: 0 1rem 0 0;
+        max-width: 150px;
+    }
+    img{
+        border-radius: 60px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 425px){
+    #profile-thumbnail{
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

@@ -7,7 +7,7 @@ export default function APropos() {
 
   const listValues = values.map(value => {
     return <div className='value' key={value.header}>
-      <Collapse data={value}/>
+      <Collapse header={Object.values(value)[0]} content={value.content} size='large-size'/>
     </div>
   })
     return (

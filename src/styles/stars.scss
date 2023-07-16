@@ -1,0 +1,19 @@
+#stars{
+    // border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    .star{
+        margin: 0 3px;
+    }
+    .star:nth-last-child(1){
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px){
+    #stars{
+        .star{
+            width:20px;
+        }
+    }
+}
