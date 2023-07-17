@@ -9,7 +9,6 @@
       }
       
       .slides-container {
-        height: 105%;
         width: 100%;
         object-fit: cover;
         overflow: hidden;
@@ -17,7 +16,13 @@
         scroll-behavior: smooth;
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 0;     
+      }
+      .slide {
+        flex-shrink: 0; // Allow the slides to maintain their original width
+        height: 100%; // Set the height of the slide to fill the container
+        object-fit: cover; // Maintain aspect ratio without distortion
+        aspect-ratio: 12/5; //define a ratio to resize the image instead of setting explicit dimensions
       }
 
       
@@ -59,19 +64,31 @@
       .current-picture-count{
         color: white;
         position: absolute;
-        top: 95%;
+        bottom: 6%;
         left: 50%;
         font-size: 1rem;
       }
-
       .hidden{
         display: none;
       }
-      
+      @media(max-width: 1024px){
+        .slide {
+          aspect-ratio: 16/10;
+        }
+      }
+      @media(max-width: 768px){
+        .slide {
+          aspect-ratio: 12/10;
+        }
+      }
       @media(max-width: 425px){
         .slider-wrapper{
           height: 300px;
         }
+        .slide {
+          aspect-ratio: 12/10;
+        }
+  
         .slide-arrow {
           top: 33%;
           font-size: 5rem;
@@ -88,6 +105,11 @@
         
         .current-picture-count{
           display: none;
+        }
+      }
+      @media(max-width: 375px){
+        .slide {
+          aspect-ratio: 12/11;
         }
       }
 }
