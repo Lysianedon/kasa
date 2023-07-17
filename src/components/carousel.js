@@ -6,7 +6,11 @@ export default function Carousel({ pictures, altImg }) {
     const [currentCarouselWidth, setCurrentCarouselWidth] = useState(0);
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const [currentPicture, setCurrentPicture] = useState(1);
-
+    // const [updatedWidth, setUpdatedWidth] = useState(0);
+    let updatedWidth = 0;
+    
+    // au resize: scrollleft = 0 + (currentPicture * currentCarouselWith)
+    
     function handleImageLoad() {
       setImagesLoaded(true);
       return imagesLoaded;
@@ -26,10 +30,15 @@ export default function Carousel({ pictures, altImg }) {
         }
 
         if (currentCarouselWidth >=  totalWidth - carouselWidth) {
-            document.querySelector(".slides-container").scrollLeft = 0;
+            updatedWidth = 0;
+            document.querySelector(".slides-container").scrollLeft = updatedWidth;
             setCurrentCarouselWidth(0);
         } else {
-            document.querySelector(".slides-container").scrollLeft += carouselWidth;
+            updatedWidth = currentPicture * currentCarouselWidth;
+            console.log(updatedWidth);
+            console.log("currentPicture", currentPicture);
+            console.log("currentCarouselWidth", currentCarouselWidth);
+            document.querySelector(".slides-container").scrollLeft = updatedWidth;
             setCurrentCarouselWidth(currentCarouselWidth + carouselWidth);
         }
     }
