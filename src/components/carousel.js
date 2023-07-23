@@ -23,9 +23,7 @@ export default function Carousel({ pictures, altImg }) {
             setCurrentCarouselWidth(currentSlidePosition);
           }
         };
-      
         window.addEventListener('resize', handleResize);
-      
         return () => {
           window.removeEventListener('resize', handleResize);
         };
