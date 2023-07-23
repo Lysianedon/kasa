@@ -24,8 +24,6 @@
         object-fit: cover; // Maintain aspect ratio without distortion
         aspect-ratio: 12/5; //define a ratio to resize the image instead of setting explicit dimensions
       }
-
-      
       .slide-arrow {
         position: absolute;
         display: flex;
