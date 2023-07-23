@@ -8,7 +8,7 @@ export default function Carousel({ pictures, altImg }) {
     const [currentPicture, setCurrentPicture] = useState(1);
     let updatedWidth = 0;
 
-    // Handle the window resize:
+    // Handle the window resizing:
     useEffect(() => {
         const handleResize = () => {
           let carouselWidth = document.querySelector(".slides-container").offsetWidth;
