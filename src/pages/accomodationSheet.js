@@ -1,6 +1,7 @@
 import {  useParams, Navigate } from 'react-router-dom'
 import logements from '../data/accomodations.json';
 import "../styles/accomodationSheet.scss";
+import NotFound from '../pages/notFound';
 import Collapse from '../components/collapse';
 import ProfileThumbnail from '../components/profileThumbnail';
 import Tag from '../components/tag';
@@ -10,7 +11,7 @@ export default function FicheLogement() {
   let { id } = useParams();
   let logementData = logements.find((log) => log.id === id);
   if (!logementData) {
-    return <Navigate to="/not-found" replace={true} />;
+    return <NotFound/>
   }
   const tags = logementData.tags.map(t => <div className='tag' key={t}><Tag tag={t}/></div> )
 
