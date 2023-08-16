@@ -71,6 +71,12 @@
         display: none;
       }
 
+      @media(max-height: 900px){
+        .slide {
+          aspect-ratio: 3/1;
+        }
+      }
+
       @media(max-width: 1024px){
         .slide {
           aspect-ratio: 16/10;
