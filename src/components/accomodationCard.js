@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../styles/logementCard.scss';
+import '../styles/accomodationCard.scss';
 export default function logementCard({data}) {
     const bannerImg = {
         background: `linear-gradient(to top, rgb(60, 60, 61) 8%, rgba(255, 255, 255, 0) 50%), url(${data.cover})`,

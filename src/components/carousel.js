@@ -1,5 +1,5 @@
 import '../styles/carousel.scss';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Carousel({ pictures, altImg }) { 
     
@@ -62,7 +62,6 @@ export default function Carousel({ pictures, altImg }) {
         if (pictures.length <= 1) {
             return;
         }
-    
         const carouselWidth = document.querySelector(".slides-container").offsetWidth;
         const totalWidth = pictures.length * carouselWidth;
     
@@ -71,13 +70,12 @@ export default function Carousel({ pictures, altImg }) {
         let updatedWidth;
     
         if (currentCarouselWidth === 0) {
-            // When reaching the first image, we want to show the last image on the left
+            // When reaching the first image, show the last image on the left
             updatedWidth = totalWidth - carouselWidth;
         } else {
             // Slide to the previous image normally
             updatedWidth = (prevPicture - 1) * carouselWidth;
         }
-    
         setCurrentPicture(prevPicture);
         document.querySelector(".slides-container").scrollLeft = updatedWidth;
         setCurrentCarouselWidth(updatedWidth);

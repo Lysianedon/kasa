@@ -1,6 +1,6 @@
 import Banner from '../components/banner';
 import mountainsImg from '../assets/mountains.png';
-import '../styles/aPropos.scss'
+import '../styles/about.scss'
 import Collapse from '../components/collapse';
 import values from '../data/values.json';
 export default function APropos() {

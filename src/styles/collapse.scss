@@ -1,3 +1,5 @@
+@import 'index';
+
 .large-size{
     width: 75vw;
     margin: 2.5vh 0;
@@ -9,7 +11,7 @@
 
 .header{
     padding: 1vw 0 1vw 1.3vw;
-    background-color: #FF6060;
+    background-color: $primary-color;
     border-radius: 5px;
     display: flex;
     cursor: pointer;
@@ -58,7 +60,7 @@
     }
 }
 
-@media(max-width: 425px){
+@media(max-width: 450px){
     .large-size{
         width: 89vw;
     }

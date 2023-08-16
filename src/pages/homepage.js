@@ -1,12 +1,12 @@
 import '../styles/homepage.scss';
 import Banner from '../components/banner';
 import homepageImg from '../assets/homepage-img.png';
-import logements from '../data/logements.json';
-import LogementCard from '../components/logementCard';
+import logements from '../data/accomodations.json';
+import AccomodationCard from '../components/accomodationCard';
 export default function Homepage() {
   const listItems = logements.map(logement => 
     <div className="card" key={logement.id}>
-      <LogementCard data={logement} />
+      <AccomodationCard data={logement} />
     </div>
   )
     return (

@@ -5,9 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import ErrorPage from "./pages/notFound";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/homepage";
-import FicheLogement from "./pages/ficheLogement";
-import APropos from "./pages/aPropos";
-import Layout from "./components/layout";
+import AccomodationSheet from "./pages/accomodationSheet";
+import About from "./pages/about";
+import Layout from "./components/_layout";
 
 const router = createBrowserRouter([
   {
@@ -17,22 +17,20 @@ const router = createBrowserRouter([
         <Homepage />
       </Layout>
     ),
-    // errorElement: <Layout><ErrorPage /></Layout>,
   },
   {
     path: "fiche-logement/:id",
     element: (
       <Layout>
-        <FicheLogement />
+        <AccomodationSheet />
       </Layout>
     ),
-    // errorElement: <Layout><ErrorPage /></Layout>,
   },
   {
     path: "a-propos",
     element: (
       <Layout>
-        <APropos />
+        <About />
       </Layout>
     ),
   },

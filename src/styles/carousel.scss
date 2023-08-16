@@ -58,6 +58,7 @@
       .slide {
         width: 100%;
         flex: 1 0 100%;
+        aspect-ratio: 16/10;
       }
       .current-picture-count{
         color: white;
@@ -69,6 +70,7 @@
       .hidden{
         display: none;
       }
+
       @media(max-width: 1024px){
         .slide {
           aspect-ratio: 16/10;
@@ -79,7 +81,7 @@
           aspect-ratio: 12/10;
         }
       }
-      @media(max-width: 425px){
+      @media(max-width: 450px){
         .slider-wrapper{
           height: 300px;
         }
@@ -94,13 +96,11 @@
         #slide-arrow-prev {
           left: 2%;
         }
-        
         #slide-arrow-next {
           right: .1%;
           padding-left: 0;
           background-color: transparent;
         }
-        
         .current-picture-count{
           display: none;
         }
@@ -108,6 +108,11 @@
       @media(max-width: 375px){
         .slide {
           aspect-ratio: 12/11;
+        }
+      }
+      @media(max-width: 320px){
+        .slide {
+          aspect-ratio: 8/9;
         }
       }
 }

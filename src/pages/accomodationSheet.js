@@ -1,6 +1,6 @@
 import {  useParams, Navigate } from 'react-router-dom'
-import logements from '../data/logements.json';
-import "../styles/ficheLogement.scss";
+import logements from '../data/accomodations.json';
+import "../styles/accomodationSheet.scss";
 import Collapse from '../components/collapse';
 import ProfileThumbnail from '../components/profileThumbnail';
 import Tag from '../components/tag';

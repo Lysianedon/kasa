@@ -1,3 +1,5 @@
+@import 'index';
+
 #layout{
     min-height: 100vh;
     position: relative;
@@ -23,7 +25,7 @@ nav{
     }
     a {
         display: block;
-        color: #FF6060;
+        color: $primary-color;
         margin: 0 2vw;
         text-decoration: none;
         font-family: 'Montserrat';

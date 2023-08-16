@@ -1,9 +1,11 @@
 
+@import 'index';
+
 #tag{
     display: inline;
     color: white;
     cursor: pointer;
-    background-color: #FF6060;
+    background-color: $primary-color;
     padding: 5px 30px;
     min-width: 100px;
     text-align: center;
