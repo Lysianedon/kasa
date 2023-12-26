@@ -2,7 +2,7 @@ import '../styles/carousel.scss';
 import { useState, useEffect } from 'react';
 
 export default function Carousel({ pictures, altImg }) { 
-    
+  
     const [currentCarouselWidth, setCurrentCarouselWidth] = useState(0);
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const [currentPicture, setCurrentPicture] = useState(1);
